@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.1/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/logo.svg" alt="netflixlogo" title="netflixlogo">
+                    </a>
+                </div>
+                <div class="col-6 text-right">
+                    <button class="btn btn-sm netflix-btn hideshow" id="AddMovie">Add movie</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid mt-5">
+            <div class="row" id="movContainer">
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="mb-0">premalu</h2>
+                        </div>
+                        <div class="card-body p-0">
+                            <figure class="mb-0 movieCard">
+                                <img class="w-100" src="https://english.mathrubhumi.com/image/contentid/policy:1.9402969:1713542973/Premalu.jpg?$p=4398656&f=16x10&w=852&q=0.8" 
+                                alt="premalulogo" title="premalulogo">
+                                <figcaption>
+                                    <p class="mb-0">
+                                        Premalu is a 2024 Indian Malayalam-language romantic comedy film directed by Girish 
+                                        A. D. and produced by Bhavana Studios in the company of Fahadh Faasil and Friends and 
+                                        Working Class Hero. Wikipedia Premalu is a 2024 Indian Malayalam-language romantic comedy film directed by Girish
+                                        A. D. and produced by Bhavana Studios in the company of Fahadh Faasil and Friends and Working Class Hero. Wikipedia
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span class="bg-danger pr-2 pl-2 pt-1 pb-1">5</span>
+                            <span>
+                                <button class="btn btn-sm btn-success mr-2">edit</button>
+                                <button class="btn btn-sm netflix-btn mr-0">remove</button>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <div class="backdrop hideshow" id="backdrop"></div>
+    <div class="movieModel" id="movieModel">
+        <i class="fa-solid fa-xmark hideshow toggleIcon"></i>
+        <form id="movieForm">
+            <div class="form-group">
+                <label for="movTitle">movTitle</label>
+                <input type="text" class="form-control" id="movTitle">
+            </div>
+            <div class="form-group">
+                <label for="movurl">movurl</label>
+                <input type="text" class="form-control" id="movurl">
+            </div>
+            <div class="form-group">
+                <label for="overview">overview</label>
+                <textarea id="overview" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">rating</label>
+                <select  id="rating" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <span class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-sm btn-success mr-2" id="addBtn">Add Movie</button>
+                <button type="button" class="btn btn-sm btn-success mr-2 d-none" id="updateBtn">Update Movie</button>
+                <button type="button" class="btn btn-sm btn-danger hideshow mr-2">Close</button>
+            </span>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.1/dist/sweetalert2.all.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
