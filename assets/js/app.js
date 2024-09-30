@@ -239,6 +239,7 @@ const onUpdateBtn=()=>{
 const onAddMovie=()=>{
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
+    movieForm.reset();
 }
 
 
