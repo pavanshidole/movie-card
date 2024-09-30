@@ -10,6 +10,7 @@ const movContainer=document.getElementById("movContainer");
 const addBtn=document.getElementById("addBtn");
 const updateBtn=document.getElementById("updateBtn");
 const AddMovie=document.getElementById("AddMovie");
+const hideFormInfo=document.querySelectorAll(".hideFormInfo");
 
 
 
@@ -230,7 +231,7 @@ const onUpdateBtn=()=>{
 
     snackbar(`this ${updateObj.title} movie update is successFully!` , `success`);
     onHideShow();
-    movieForm.reset();
+   
     
     console.log(updateObj);
 }
@@ -239,15 +240,19 @@ const onUpdateBtn=()=>{
 const onAddMovie=()=>{
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
-    movieForm.reset();
-}
+    
+}    
 
+
+// const onBackDrop=()=>{
+//     movieForm.reset();
+// }
 
 
 movieForm.addEventListener("submit", onMovieForm);
 updateBtn.addEventListener("click" , onUpdateBtn);
 AddMovie.addEventListener("click", onAddMovie);
-
+// backdrop.addEventListener("click", onBackDrop);
 
 const onHideShow=()=>{
     backdrop.classList.toggle("active");
@@ -259,5 +264,11 @@ hideshow.forEach(item=>{
 })
 
 
+const onHideInfo=()=>{
+    movieForm.reset();
+}
 
 
+hideFormInfo.forEach(hide=>{
+    hide.addEventListener("click", onHideInfo);
+})
